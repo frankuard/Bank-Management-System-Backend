@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 
 function connectToDB() {
     
-    mongoose.connect(process.env.MONGO_URI)
+    mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         console.log("Server is Connected to DB");
     })
     .catch(err =>{
-        console.log("Error connecting to DB")
+        console.log("Error connecting to DB",err)
         process.exit(1)
     })
 }
