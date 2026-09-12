@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/frankuard/Bank-Management-System-Backend#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.10.0"
   }
 }
