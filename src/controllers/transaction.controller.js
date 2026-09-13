@@ -143,4 +143,7 @@ async function createTransaction(req,res) {
 
     await transaction.save({session})
 
+    await session.commitTransaction()
+    session.endSession()
+
 }
