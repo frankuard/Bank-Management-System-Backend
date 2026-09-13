@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { authMiddleware } = require("../middlewares/auth.middleware");
+const { authMiddleware, authSystemUserMiddleware } = require("../middlewares/auth.middleware");
 const { createTransaction } = require("../controllers/transaction.controller");
 
 
@@ -12,6 +12,14 @@ const transactionRoutes = Router();
  */
 
 transactionRoutes.post('/',authMiddleware,createTransaction)
+
+
+/**
+ * - POST /api/transactions/system/initial-funds
+ * - Create initial funds transaction from system user
+ */
+
+transactionRoutes.post("/system/intial-funds",authSystemUserMiddleware,)
 
 module.exports = transactionRoutes;
 
