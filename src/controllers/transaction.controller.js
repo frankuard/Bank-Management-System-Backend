@@ -146,4 +146,10 @@ async function createTransaction(req,res) {
     await session.commitTransaction()
     session.endSession()
 
+
+    /**
+     * 10. Send email notification
+     */
+
+    
 }
