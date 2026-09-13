@@ -22,6 +22,12 @@ const accountSchema = new mongoose.Schema({
         required:[true,"Currency is required for creating an account"],
         default: "NPR"
     },
+    systemUser:{
+        type: Boolean,
+        default: false,
+        immutable: true,
+        select:false
+      },
     
 },{
    timestamps: true 
